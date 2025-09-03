@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Crop Rotation & Recommendation System
 
 ## 📌 Project Overview
@@ -26,3 +27,7 @@ This project focuses on building a **Crop Rotation and Recommendation System** t
 
 ---
 🚀 Week 1 Milestone: Repository setup with folder structure and initial README.
+=======
+# crop-rotation-recommender
+“AI-powered crop rotation and recommendation system for sustainable agriculture, developed as part of AICTE–Shell Edunet Internship.”
+>>>>>>> 7b9477befa1e6434289cb125743273b398404b8d

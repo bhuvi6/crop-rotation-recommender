@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crop Recommendation System</title>
+  <style>
+   body {
+  font-family: Arial, sans-serif;
+  background: #f0f9f0;
+  margin: 0;
+  padding: 0;
+}
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 100px auto;  /* pushes it below header + centers horizontally */
+}
+
+    h2 {
+      font-weight: 700;
+      color: #2e7d32;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #2e7d32;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .btn {
+      grid-column: span 2;
+      background: #388e3c;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #2e7d32;
+    }
+    
+    header {
+  background: #388e3c;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  position: fixed;   /* Sticks to top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+header span {
+  margin-left: 10px;
+}
+
+
+    
+
+  </style>
+</head>
+<body>
+  <header>
+    🌾 <span>Sustainable Farming</span>
+  </header>
+
+  <div class="card">
+    <h2>Crop Recommendation System</h2>
+    <form action="/predict" method="POST">
+      <div>
+        <label for="N">Nitrogen (N)</label>
+        <input type="number" step="any" name="N" required>
+      </div>
+      <div>
+        <label for="P">Phosphorus (P)</label>
+        <input type="number" step="any" name="P" required>
+      </div>
+      <div>
+        <label for="K">Potassium (K)</label>
+        <input type="number" step="any" name="K" required>
+      </div>
+      <div>
+        <label for="temperature">Temperature (°C)</label>
+        <input type="number" step="any" name="temperature" required>
+      </div>
+      <div>
+        <label for="humidity">Humidity (%)</label>
+        <input type="number" step="any" name="humidity" required>
+      </div>
+      <div>
+        <label for="ph">pH value</label>
+        <input type="number" step="any" name="ph" required>
+      </div>
+      <div>
+        <label for="rainfall">Rainfall (mm)</label>
+        <input type="number" step="any" name="rainfall" required>
+      </div>
+      <button type="submit" class="btn">Get Recommendation</button>
+    </form>
+  </div>
+</body>
+</html>
